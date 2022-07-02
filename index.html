@@ -1,31 +1,250 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Hoo Hoo Haa
-        </title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DJason</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: black;
+                color: white;
+            }
+            .content{
+                width: 700px;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+                border-top: 3px solid white;
+                border-bottom: 3px solid white;
+            }
+            .top{
+                width: 700px;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+            .bottom{
+                width: 700px;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            a{
+                color: orange;
+            }
+        </style>
     </head>
     <body>
-
-        <!--
-            If you're looking for secret content, then I'm sorry.
-            This is just a dog website <3
-        -->
-
+        <div class="top">
+            <h1>
+                DJason's personal TF2 config for public use
+            </h1>
+            <p>
+                This is a website where is all info about me and my configs I use for tf2. It is also for me presonally to know what configurations I had, if I somehow lost my backups.
+            </p>
+        </div>
         <div class="content">
-            <h1>Hello!</h1>
+            <h2>
+                TF2 configs
+            </h2>
+            <h3>
+                Hud
+            </h3>
             <p>
-                I hope you'll find yourself comfortable on my website, sweetie!<br>
-                Because there is just this cute dog!
+                I'm using BudHud. Used it for a long time, and I'll probably never gonna change it.
+            </p>
+            <ul>
+                <li><a href="https://github.com/rbjaxter/budhud" target="_blank">Download BudHud</a></li>
+                <li><a href="https://github.com/rbjaxter/budhud/wiki" target="_blank">BudHud Wiki</a></li>
+            </ul>
+            <p>
+                Changes: rainbow ubercharge meter, square white crosshair with black outline, default main menu.
+            </p>
+            <h3>
+                Mastercomfig
+            </h3>
+            <ul>
+                <li><a href="https://mastercomfig.com/" target="_blank">Mastercomfig website</a></li>
+                <li><a href="https://docs.mastercomfig.com/latest/" target="_blank">Documentation</a></li>
+            </ul>
+            <p>
+                Using: medium-low<br>
+                Addons: flat mouse, no tutorial, no soundscapes, disabled pyroland.<br>
+                Launch: -novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime -enablefakeip -console
+            </p>
+            <h3>
+                Hit sounds and kill sound
+            </h3>
+            <ul>
+                <li><a href="hitsound_pop.wav" download="hitsound">hitsound</a> - 'pop' sound</li>
+                <li><a href="hitsound_quake.wav" download="hitsound">hitsound</a> - Quake III Arena hit sound</li>
+                <li><a href="killsound.wav" download="killsound">killsound</a> - Quake Champions kill sound</li>
+            </ul>
+            <h3>
+                Minimal explosion effect
+            </h3>
+            <p>
+                This VPK file replaces original explosion effects for smaller ones.<br>
+                Better vision in battlefield.
             </p>
             <p>
-                Here's the cute dog :
+                <a href="explosions_original.vpk" download="explosions">Download minimal explosion VPK</a>
             </p>
-            <img src="puppy.png" alt="puppy" class="pupper">
+            <h3>
+                Modules
+            </h3>
             <p>
-                &#169 2022 <a href="https://github.com/MagmaDee" target="_blank" title="Dee's GitHub">Dee</a>
+                I put everything inside 'modules.cfg' under 'overrides' folder in 'cfg' folder.<br>
+                If you're learning rocket jumping, uncomment 3 lines under '// rocket jump' And change your bind.
+            </p>
+            <pre>
+// masterconfig settings
+match_hud=off
+jigglebones=off
+hud_player_model=off
+hud_achievement=off
+htmlmotd=off
+logo=off
+props=low
+ropes=low
+sprays=on
+gibs=off
+sillygibs=off
+ragdolls=off
+hud_avatars=off
+killstreaks=off
+mod_support=off
+sound=ultra
+voice_chat=off
+motion_blur=off
+particles=low
+water=medium
+shadows=off
+effects=medium
+lighting_ex=high
+lighting=medium_high
+lod=high
+anti_aliasing=msaa_8x
+
+// spray fix
+cl_spraydisable 0        // enable sprays
+cl_allowdownload 1       // allows you to download other player's sprays
+cl_allowupload 1         // uploads your sprays to other players
+r_spray_lifetime 2       // keep sprays for 2 rounds
+mp_decals 200            // decal limit
+r_decals 2048            // decal limit
+r_decal_cover_count 4
+r_decal_cullsize 1 
+r_decal_overlap_area 0.4 
+r_decal_overlap_count 3 
+r_decalstaticprops 1 
+
+// fov
+fov_desired 90
+
+// mouse
+m_rawinput 1
+sensitivity 3.5
+
+// gameplay
+tf_medigun_autoheal 1
+tf_sniper_fullcharge_bell 1
+cl_autoreload 1
+hud_combattext 1
+
+hidepanel specgui
+
+tf_dingalingaling 1
+tf_dingalingaling_lasthit 1
+tf_dingaling_volume 1
+tf_dingaling_lasthit_volume 1
+
+tf_dingaling_pitchmaxdmg 50
+tf_dingaling_pitchmindmg 150
+
+// hud
+tf_contract_progress_show 0
+cl_hud_minmode 0
+cl_notifications_show_ingame 0
+hud_classautokill 0
+cl_spec_carrieditems 0
+tf_scoreboard_ping_as_text 1
+cl_disablehtmlmotd 1
+tf_scoreboard_mouse_mode 2
+
+// movement
+unbind "w"
+unbind "s"
+unbind "a"
+unbind "d"
+unbind "q"
+bind "w" "+forward"
+bind "s" "+back"
+bind "a" "+moveleft"
+bind "d" "+moveright"
+bind "q" "lastinv"
+
+// alt+tab and sound restart
+unbind "F9"
+alias altabfix "record bugfix; wait 15; stop; snd_restart;"
+bind "F9" "altabfix"
+
+// rocket jump
+//alias +rocketjump "+jump; +duck; wait; +attack"
+//alias -rocketjump "-jump; -attack; wait; wait; wait; -duck"
+//bind "MOUSE5" "+rocketjump"
+
+//Sentry Quickbuild Bind
+unbind "MOUSE3"
+bind "MOUSE3" "destroy 2 0; build 2 0"
+
+// Discpenser Quickbuild Bind
+unbind "MOUSE5"
+bind "MOUSE5" "destroy 0 0; build 0 0"
+
+// weapon model invisible toggle
+unbind "v"
+bind "v" "toggle r_drawviewmodel"
+
+// net graph toggle
+unbind "-"
+bind "-" "toggle net_graph"
+
+// Quick-Switch Loadout Script
+unbind "h"
+unbind "j"
+unbind "k"
+unbind "l"
+bind "h" "load_itempreset 0" 
+bind "j" "load_itempreset 1"
+bind "k" "load_itempreset 2"
+bind "l" "load_itempreset 3"
+
+// viewmodels big and small
+unbind "["
+unbind "]"
+bind "[" "tf_use_min_viewmodels 1"
+bind "]" "tf_use_min_viewmodels 0"
+
+// viewmodels close and far
+unbind "o"
+unbind "p"
+bind "o" "viewmodel_fov 70"
+bind "p" "viewmodel_fov 85"
+
+echo "MODULES ARE ENABLED!"
+            </pre>
+        </div>
+        <div class="bottom">
+            <p>
+                <a href="#">^ Back to top ^</a>
+            </p>
+            <p>
+                &#169; 2022 <a href="https://github.com/MagmaDee" target="_blank">DJason</a>
             </p>
         </div>
     </body>
